@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — GPT DEL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --red: #e03535; --red-dark: #b82222;
+      --bg: #111110; --surface: #1a1918;
+      --border: rgba(255,255,255,0.08);
+      --text: #e8e6e3; --text-muted: #888784;
+      --font-body: 'Inter', system-ui, sans-serif;
+      --font-display: 'Space Grotesk', system-ui, sans-serif;
+      --radius-md: 10px; --radius-lg: 16px;
+    }
+    html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 16px; line-height: 1.7; min-height: 100dvh; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(17,17,16,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo-icon { width: 32px; height: 32px; background: var(--red); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; font-size: 13px; color: #fff; letter-spacing: -0.5px; }
+    .nav-logo-name { font-family: var(--font-display); font-weight: 700; font-size: 17px; color: var(--text); }
+    .nav-back { color: var(--text-muted); text-decoration: none; font-size: 14px; transition: color 0.15s; }
+    .nav-back:hover { color: var(--text); }
+
+    .container { max-width: 720px; margin: 0 auto; padding: 64px 24px 96px; }
+    .page-label { display: inline-block; background: rgba(224,53,53,0.12); border: 1px solid rgba(224,53,53,0.3); color: #f07070; border-radius: 999px; padding: 4px 14px; font-size: 13px; font-weight: 500; margin-bottom: 24px; }
+    h1 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; line-height: 1.15; color: #fff; margin-bottom: 12px; }
+    .subtitle { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid var(--border); max-width: 52ch; }
+    h2 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; color: #fff; margin: 40px 0 16px; }
+    p { color: var(--text-muted); margin-bottom: 16px; max-width: 68ch; }
+    a { color: var(--red); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* FAQ */
+    .faq { display: flex; flex-direction: column; gap: 2px; margin-bottom: 48px; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; }
+    .faq-q { width: 100%; background: var(--surface); border: none; color: var(--text); font-family: var(--font-body); font-size: 15px; font-weight: 500; padding: 18px 20px; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; transition: background 0.15s; }
+    .faq-q:hover { background: rgba(255,255,255,0.04); }
+    .faq-q .arrow { font-size: 18px; color: var(--text-muted); transition: transform 0.2s; flex-shrink: 0; }
+    .faq-item.open .faq-q .arrow { transform: rotate(45deg); }
+    .faq-a { display: none; padding: 0 20px 18px; background: var(--surface); color: var(--text-muted); font-size: 14px; line-height: 1.7; }
+    .faq-item.open .faq-a { display: block; }
+
+    /* Contact card */
+    .contact-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px; display: flex; flex-direction: column; gap: 16px; }
+    .contact-card h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: #fff; }
+    .contact-card p { margin: 0; color: var(--text-muted); font-size: 14px; }
+    .btn-contact { display: inline-flex; align-items: center; gap: 8px; background: var(--red); color: #fff; border: none; border-radius: var(--radius-md); padding: 12px 24px; font-family: var(--font-body); font-size: 15px; font-weight: 600; text-decoration: none; cursor: pointer; transition: background 0.15s; width: fit-content; }
+    .btn-contact:hover { background: var(--red-dark); text-decoration: none; }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; }
+    footer p { color: var(--text-muted); font-size: 13px; margin: 0; }
+    footer a { color: var(--text-muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">GD</div>
+    <span class="nav-logo-name">GPT DEL</span>
+  </a>
+  <a href="index.html" class="nav-back">← Back to home</a>
+</nav>
+
+<div class="container">
+  <div class="page-label">Help</div>
+  <h1>Support</h1>
+  <p class="subtitle">Having trouble? Find answers below or reach out — we usually respond within 24 hours.</p>
+
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq">
+
+    <div class="faq-item">
+      <button class="faq-q">The delete buttons aren't showing up <span class="arrow">+</span></button>
+      <div class="faq-a">Make sure the extension is enabled in Chrome. Click the puzzle icon in your toolbar, find GPT DEL, and toggle it on. Then refresh chat.openai.com. If the issue persists, try disabling and re-enabling the extension.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">I deleted a conversation by accident — can I get it back? <span class="arrow">+</span></button>
+      <div class="faq-a">Deleted conversations cannot be recovered — this is a limitation of ChatGPT itself. We recommend using the <strong>Archive</strong> feature instead of Delete when you're unsure. Archived conversations are hidden but can be restored at any time.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">How do I archive conversations instead of deleting them? <span class="arrow">+</span></button>
+      <div class="faq-a">Select the conversations you want to archive using the checkboxes, then click the <strong>Archive</strong> button in the toolbar. Archived chats are hidden from the main list but can be found and restored in the Archive section.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Free plan only lets me select 5 conversations — why? <span class="arrow">+</span></button>
+      <div class="faq-a">The Free plan allows archiving up to 5 conversations at once. To delete or archive in bulk without limits, upgrade to Pro for just $0.98/month.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">How do I cancel my Pro subscription? <span class="arrow">+</span></button>
+      <div class="faq-a">You can cancel anytime. Email us at <a href="mailto:support@gptdel.com">support@gptdel.com</a> and we'll cancel your subscription immediately — no questions asked.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Does GPT DEL work with the ChatGPT mobile app? <span class="arrow">+</span></button>
+      <div class="faq-a">Currently GPT DEL is a Chrome browser extension and works on desktop only. Mobile app support is not available at this time.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Is my ChatGPT data safe? <span class="arrow">+</span></button>
+      <div class="faq-a">Yes. GPT DEL does not read, collect, or transmit any of your ChatGPT conversations or personal data. Everything happens locally in your browser. See our <a href="privacy.html">Privacy Policy</a> for full details.</div>
+    </div>
+
+  </div>
+
+  <h2>Still need help?</h2>
+  <div class="contact-card">
+    <h3>Contact us by email</h3>
+    <p>Describe your issue and we'll get back to you within 24 hours.</p>
+    <a href="mailto:support@gptdel.com" class="btn-contact">✉️ support@gptdel.com</a>
+  </div>
+</div>
+
+<footer>
+  <p><a href="index.html">GPT DEL</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="support.html">Support</a></p>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+
+</body>
+</html>

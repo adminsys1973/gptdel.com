@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — GPT DEL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --red: #e03535; --red-dark: #b82222;
+      --bg: #111110; --surface: #1a1918;
+      --border: rgba(255,255,255,0.08);
+      --text: #e8e6e3; --text-muted: #888784;
+      --font-body: 'Inter', system-ui, sans-serif;
+      --font-display: 'Space Grotesk', system-ui, sans-serif;
+      --radius-md: 10px; --radius-lg: 16px;
+    }
+    html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 16px; line-height: 1.7; min-height: 100dvh; }
+
+    /* NAV */
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(17,17,16,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo-icon { width: 32px; height: 32px; background: var(--red); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; font-size: 13px; color: #fff; letter-spacing: -0.5px; }
+    .nav-logo-name { font-family: var(--font-display); font-weight: 700; font-size: 17px; color: var(--text); }
+    .nav-back { color: var(--text-muted); text-decoration: none; font-size: 14px; transition: color 0.15s; }
+    .nav-back:hover { color: var(--text); }
+
+    /* CONTENT */
+    .container { max-width: 720px; margin: 0 auto; padding: 64px 24px 96px; }
+    .page-label { display: inline-block; background: rgba(224,53,53,0.12); border: 1px solid rgba(224,53,53,0.3); color: #f07070; border-radius: 999px; padding: 4px 14px; font-size: 13px; font-weight: 500; margin-bottom: 24px; }
+    h1 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; line-height: 1.15; color: #fff; margin-bottom: 12px; }
+    .meta { color: var(--text-muted); font-size: 14px; margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+    h2 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; color: #fff; margin: 40px 0 12px; }
+    p { color: var(--text-muted); margin-bottom: 16px; max-width: 68ch; }
+    ul { color: var(--text-muted); padding-left: 20px; margin-bottom: 16px; }
+    ul li { margin-bottom: 8px; }
+    a { color: var(--red); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .highlight-box { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; margin: 32px 0; }
+    .highlight-box p { margin: 0; color: var(--text); }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; }
+    footer p { color: var(--text-muted); font-size: 13px; margin: 0; }
+    footer a { color: var(--text-muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">GD</div>
+    <span class="nav-logo-name">GPT DEL</span>
+  </a>
+  <a href="index.html" class="nav-back">← Back to home</a>
+</nav>
+
+<div class="container">
+  <div class="page-label">Legal</div>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Last updated: April 7, 2026</p>
+
+  <div class="highlight-box">
+    <p>🔒 <strong>Short version:</strong> GPT DEL does not collect, store, or share any of your personal data or ChatGPT conversations. Everything happens locally in your browser.</p>
+  </div>
+
+  <h2>1. What We Collect</h2>
+  <p>GPT DEL is a browser extension that operates entirely within your browser. We do <strong>not</strong> collect:</p>
+  <ul>
+    <li>Your ChatGPT conversations or messages</li>
+    <li>Your personal information (name, email, IP address)</li>
+    <li>Your browsing history or activity</li>
+    <li>Any data from your ChatGPT account</li>
+  </ul>
+
+  <h2>2. Local Storage Only</h2>
+  <p>Any settings or preferences you configure within the extension (such as your subscription status) are stored locally in your browser using Chrome's storage API. This data never leaves your device and is never transmitted to our servers.</p>
+
+  <h2>3. Payment Information</h2>
+  <p>If you upgrade to Pro, payments are processed securely by Stripe. We never see or store your credit card details. Stripe's privacy policy applies to payment processing: <a href="https://stripe.com/privacy" target="_blank" rel="noopener">stripe.com/privacy</a>.</p>
+
+  <h2>4. Analytics</h2>
+  <p>We do not use any third-party analytics, tracking pixels, or data collection tools. We do not use Google Analytics, Facebook Pixel, or any similar services.</p>
+
+  <h2>5. Permissions</h2>
+  <p>GPT DEL requests permission to access <strong>chat.openai.com</strong> only. This permission is used solely to display the delete and archive buttons within the ChatGPT interface. We do not read the content of your conversations.</p>
+
+  <h2>6. Children's Privacy</h2>
+  <p>GPT DEL is not directed at children under 13. We do not knowingly collect information from children.</p>
+
+  <h2>7. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy occasionally. Any changes will be posted on this page with an updated date. Continued use of the extension after changes constitutes acceptance of the new policy.</p>
+
+  <h2>8. Contact</h2>
+  <p>If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:support@gptdel.com">support@gptdel.com</a></p>
+</div>
+
+<footer>
+  <p><a href="index.html">GPT DEL</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="support.html">Support</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a></p>
+</footer>
+
+</body>
+</html>
