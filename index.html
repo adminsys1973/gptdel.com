@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GPT DEL — Selective Delete & Archive for ChatGPT</title>
-<meta name="description" content="Clear your ChatGPT history in seconds. Selectively delete or archive ChatGPT conversations with one click.">
+<meta name="description" content="Clear your ChatGPT history in seconds. Archive chats for free, try delete on up to 2 chats, and unlock unlimited bulk delete with a one-time upgrade.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
@@ -30,7 +30,6 @@
   html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
   body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 16px; line-height: 1.6; min-height: 100dvh; }
 
-  /* NAV */
   nav {
     position: sticky; top: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
@@ -60,7 +59,6 @@
   }
   .btn-nav:hover { background: var(--red-dark); }
 
-  /* HERO */
   .hero {
     max-width: 900px; margin: 0 auto;
     padding: 100px 32px 80px;
@@ -82,7 +80,7 @@
   .hero h1 span.accent-a { color: var(--yellow); }
   .hero p {
     font-size: clamp(1rem, 2vw, 1.2rem); color: var(--text-muted);
-    max-width: 560px; margin: 0 auto 40px;
+    max-width: 620px; margin: 0 auto 40px;
   }
   .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
   .btn-primary {
@@ -99,7 +97,6 @@
   }
   .btn-secondary:hover { border-color: rgba(255,255,255,0.25); }
 
-  /* FEATURES */
   .section { padding: 80px 32px; max-width: 1000px; margin: 0 auto; }
   .section-label {
     font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
@@ -107,7 +104,7 @@
   }
   .section-title {
     font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.4rem);
-    font-weight: 700; color: #fff; margin-bottom: 48px; max-width: 520px;
+    font-weight: 700; color: #fff; margin-bottom: 48px; max-width: 560px;
   }
   .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2px; }
   .feature-card {
@@ -128,7 +125,6 @@
   }
   .feature-card p { font-size: 15px; color: var(--text-muted); line-height: 1.6; }
 
-  /* HOW IT WORKS */
   .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-top: 48px; }
   .step { position: relative; }
   .step-num {
@@ -138,7 +134,6 @@
   .step h3 { font-family: var(--font-display); font-size: 17px; font-weight: 600; color: #fff; margin-bottom: 8px; }
   .step p { font-size: 14px; color: var(--text-muted); }
 
-  /* PRICING */
   .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 48px; }
   .pricing-card {
     background: var(--surface); border: 1px solid var(--border);
@@ -161,6 +156,9 @@
     padding: 3px 10px; border-radius: 999px; text-transform: uppercase;
     border: 1px solid var(--border);
   }
+  .pricing-name { font-size: 13px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
+  .pricing-price { font-family: var(--font-display); font-size: 42px; font-weight: 800; color: #fff; line-height: 1.1; margin-bottom: 8px; }
+  .pricing-price span { font-size: 16px; font-weight: 400; color: var(--text-muted); }
   .paypal-note {
     display: inline-flex;
     align-items: center;
@@ -171,14 +169,7 @@
     vertical-align: middle;
     white-space: nowrap;
   }
-  .paypal-note svg {
-    width: 14px;
-    height: 14px;
-    flex-shrink: 0;
-  }
-  .pricing-name { font-size: 13px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
-  .pricing-price { font-family: var(--font-display); font-size: 42px; font-weight: 800; color: #fff; line-height: 1; margin-bottom: 4px; }
-  .pricing-price span { font-size: 16px; font-weight: 400; color: var(--text-muted); }
+  .paypal-note svg { width: 14px; height: 14px; flex-shrink: 0; }
   .pricing-desc { font-size: 14px; color: var(--text-muted); margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid var(--border); }
   .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
   .pricing-features li { font-size: 14px; color: var(--text); display: flex; align-items: center; gap: 8px; }
@@ -193,10 +184,8 @@
   .btn-plan-pro { background: var(--red); color: #fff; border: none; }
   .btn-plan-pro:hover { background: var(--red-dark); }
 
-  /* DIVIDER */
   .divider { height: 1px; background: var(--border); max-width: 1000px; margin: 0 auto; }
 
-  /* FOOTER */
   footer {
     border-top: 1px solid var(--border);
     padding: 32px; max-width: 1000px; margin: 0 auto;
@@ -215,6 +204,7 @@
     .section { padding: 60px 16px; }
     .feature-card:first-child, .feature-card:last-child { border-radius: var(--radius-lg); }
     footer { flex-direction: column; align-items: flex-start; }
+    .paypal-note { display: block; margin-left: 0; margin-top: 8px; }
   }
 </style>
 </head>
@@ -234,14 +224,13 @@
 </nav>
 
 <main>
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-badge">
       <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><circle cx="6" cy="6" r="6"/></svg>
       Chrome Extension
     </div>
     <h1>Selective <span class="accent-d">D</span>elete &amp; <span class="accent-a">A</span>rchive<br>for ChatGPT</h1>
-    <p>Clean your ChatGPT history in seconds. Archive chats for free, try delete on up to 2 chats, and unlock unlimited bulk delete when you need serious cleanup.</p>
+    <p>Clean your ChatGPT history in seconds. Archive chats for free, try delete on up to 2 chats, and unlock unlimited bulk delete with a one-time upgrade.</p>
     <div class="hero-actions">
       <a href="https://chrome.google.com/webstore" target="_blank" rel="noopener noreferrer" class="btn-primary">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -253,7 +242,6 @@
 
   <div class="divider"></div>
 
-  <!-- FEATURES -->
   <section class="section" id="features">
     <div class="section-label">Features</div>
     <h2 class="section-title">Everything you need to manage ChatGPT history</h2>
@@ -263,31 +251,30 @@
           <polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
         </svg>
         <h3>Checkbox Selection</h3>
-        <p>Select multiple conversations at once with checkboxes. Select all, or pick exactly what you need.</p>
+        <p>Select multiple conversations at once with checkboxes. Pick exactly what you need before cleaning up.</p>
       </div>
       <div class="feature-card">
         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
           <polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
         </svg>
-        <h3>Bulk Delete</h3>
-        <p>Delete dozens of conversations instantly. No confirmation loops — fast and clean.</p>
+        <h3>Unlimited Bulk Delete</h3>
+        <p>Delete dozens or hundreds of conversations fast once you unlock Pro Unlimited.</p>
       </div>
       <div class="feature-card">
         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
         </svg>
-        <h3>Free Archive + Pro Delete</h3>
-        <p>Archive chats for free, try delete on a few chats, or upgrade to unlock unlimited bulk delete for real cleanup.</p>
+        <h3>Free Archive + Trial Delete</h3>
+        <p>Archive chats for free and try delete on up to 2 chats before upgrading to unlimited cleanup.</p>
       </div>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- HOW IT WORKS -->
   <section class="section">
     <div class="section-label">How it works</div>
-    <h2 class="section-title">Three steps to a clean history</h2>
+    <h2 class="section-title">Three steps to a cleaner history</h2>
     <div class="steps">
       <div class="step">
         <div class="step-num">01</div>
@@ -297,24 +284,22 @@
       <div class="step">
         <div class="step-num">02</div>
         <h3>Select conversations</h3>
-        <p>Checkboxes appear in your ChatGPT sidebar. Select one, many, or all.</p>
+        <p>Checkboxes appear in your ChatGPT sidebar so you can select chats in seconds.</p>
       </div>
       <div class="step">
         <div class="step-num">03</div>
         <h3>Try free, upgrade when needed</h3>
-        <p>Archive chats for free and test delete on up to 2 chats before upgrading to unlimited bulk delete.</p>
+        <p>Archive chats for free and test delete on up to 2 chats before unlocking unlimited bulk delete.</p>
       </div>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- PRICING -->
   <section class="section" id="pricing">
     <div class="section-label">Pricing</div>
     <h2 class="section-title">Simple pricing for fast ChatGPT cleanup</h2>
     <div class="pricing-grid">
-
       <div class="pricing-card">
         <div class="pricing-name">Free</div>
         <div class="pricing-price">€0 <span>/ forever</span></div>
@@ -329,9 +314,9 @@
 
       <div class="pricing-card featured">
         <div class="pricing-badge">Popular</div>
-        <div class="pricing-name">Pro Monthly</div>
+        <div class="pricing-name">Pro Unlimited</div>
         <div class="pricing-price">
-          €1.98 <span>/ month</span>
+          €5.55 <span>/ one-time</span>
           <span class="paypal-note" title="Currently available via PayPal only">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M7.2 20.4H3.9c-.3 0-.5-.3-.5-.6L5.6 5.7c.1-.5.5-.8 1-.8h6.1c2.1 0 3.7.4 4.7 1.3 1 .9 1.4 2.1 1.1 3.8-.2 1.2-.7 2.2-1.5 2.9-.8.7-1.9 1.2-3.2 1.4-.1 0-.2.1-.2.2l-.8 5.1c-.1.5-.5.8-1 .8H9.3l.4-2.4h2.2c.2 0 .4-.1.4-.3l.6-3.8c.1-.4.4-.6.8-.7 1.2-.2 2.2-.6 2.9-1.2.7-.6 1.1-1.4 1.3-2.5.2-1.3-.1-2.3-.8-3-.7-.7-1.9-1-3.7-1H7.3L5.5 19.3h1.8l-.1 1.1z"/>
@@ -339,36 +324,14 @@
             PayPal only
           </span>
         </div>
-        <div class="pricing-desc">Unlimited bulk delete for regular cleanup</div>
+        <div class="pricing-desc">One payment, unlimited bulk delete, no recurring subscription</div>
         <ul class="pricing-features">
           <li>Unlimited bulk delete</li>
-          <li>Select multiple chats quickly</li>
           <li>No free delete limit</li>
+          <li>One-time purchase</li>
         </ul>
-        <a href="https://paypal.me/gptdel/1.98" target="_blank" rel="noopener noreferrer" class="btn-plan btn-plan-pro">Get Pro Monthly — €1.98/mo</a>
+        <a href="https://paypal.me/gptdel/5.55" target="_blank" rel="noopener noreferrer" class="btn-plan btn-plan-pro">Get Pro Unlimited — €5.55</a>
       </div>
-
-      <div class="pricing-card">
-        <div class="pricing-badge-alt">Best value</div>
-        <div class="pricing-name">Pro Annual</div>
-        <div class="pricing-price">
-          €10.98 <span>/ year</span>
-          <span class="paypal-note" title="Currently available via PayPal only">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M7.2 20.4H3.9c-.3 0-.5-.3-.5-.6L5.6 5.7c.1-.5.5-.8 1-.8h6.1c2.1 0 3.7.4 4.7 1.3 1 .9 1.4 2.1 1.1 3.8-.2 1.2-.7 2.2-1.5 2.9-.8.7-1.9 1.2-3.2 1.4-.1 0-.2.1-.2.2l-.8 5.1c-.1.5-.5.8-1 .8H9.3l.4-2.4h2.2c.2 0 .4-.1.4-.3l.6-3.8c.1-.4.4-.6.8-.7 1.2-.2 2.2-.6 2.9-1.2.7-.6 1.1-1.4 1.3-2.5.2-1.3-.1-2.3-.8-3-.7-.7-1.9-1-3.7-1H7.3L5.5 19.3h1.8l-.1 1.1z"/>
-            </svg>
-            PayPal only
-          </span>
-        </div>
-        <div class="pricing-desc">Best value for long-term unlimited cleanup</div>
-        <ul class="pricing-features">
-          <li>Everything in Pro Monthly</li>
-          <li>Unlimited bulk delete all year</li>
-          <li>Lower yearly cost</li>
-        </ul>
-        <a href="https://paypal.me/gptdel/10.98" target="_blank" rel="noopener noreferrer" class="btn-plan btn-plan-pro">Get Annual — €10.98/yr</a>
-      </div>
-
     </div>
   </section>
 </main>
@@ -377,6 +340,7 @@
   <span>© 2026 GPT DEL — gptdel.com</span>
   <div class="footer-links">
     <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
     <a href="support.html">Support</a>
     <a href="mailto:hello@gptdel.com">Contact</a>
   </div>
